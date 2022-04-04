@@ -1,0 +1,1769 @@
+<style>
+  /* ----------------------------------------------- */
+  /* ------------ MASTER TEMPLATE v1.01 ------------ */
+  /* ----------------------------------------------- */
+
+
+  /* ------- RECOMMENDED TEMPLATE USE ------- */
+
+  /* 1. Open template with VSCode > Live Server Extension in Chrome. 
+     2. Inspect (F12) elements using Dev Tools > Elements - delete/edit/move elements to test custom layouts.
+     3. In VSCode, comment out (Ctrl /), move or delete collapsed elements. Review start/end tags.
+     4. Add new or copy existing "CORE CSS STYLES" to "YOUR OVERRIDE STYLES" at bottom of the CSS.
+  */
+
+
+  /* --------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------- AOP BRAND START ----------------------------------------- */
+  /* --------------------------------------------------------------------------------------------------- */
+
+
+  /* ------- IMPORT GOOGLE FONTS ------- */
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+
+  :root {
+
+    /* ------- AOP CSS VARIABLES ------- */
+
+    --primary: #2ab5cd;
+    --primary-light: #cfebef;
+    --primary-transparent: rgba(42, 181, 205, 0.45);
+    --primary-dark: #00829b;
+    --primary-dark-transparent: rgba(0, 129, 155, 0.35);
+    --primary-video-transparent: rgba(0, 67, 80, 0.80);
+    --transparent: rgba(255, 255, 255, 0);
+    --white-transparent: rgba(255, 255, 255, 0.35);
+    --font-family: 'Open Sans', sans-serif;
+    --white: #FFFFFF;
+    --gray-50: #F9FAFB;
+    --gray-100: #F3F4F6;
+    --gray-300: #D1D5DB;
+    --gray-500: #6B7280;
+    --gray-900: #111827;
+
+  }
+
+
+  /* ------- AOP HEADER/FOOTER - ON PAGE OVERRIDES ------- */
+
+  #breadcrumb-bg-container-cms {
+    background: var(--white);
+    height: 0px;
+    margin-top: 140px;
+    /* Change from 140px to 0 if no CMS Header */
+  }
+
+  #cmsPageContents {
+    position: relative;
+    z-index: 0;
+  }
+
+  .container.page-content-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  footer {
+    margin-top: 0px;
+  }
+
+  footer .container,
+  nav.container {
+    width: 1220px;
+    padding-left: 30px;
+  }
+
+  nav.container {
+    height: 97px;
+  }
+
+  .bordered-thin-bottom {
+    -webkit-box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+    box-shadow: 5px 5px 15px 5px rgb(0 0 0 / 30%);
+  }
+
+  #main-logo {
+    margin-bottom: -19px;
+  }
+
+  header.bordered-thin-bottom {
+    border-bottom: none;
+  }
+
+  footer .footer-links {
+    margin-bottom: 30px;
+  }
+
+  footer .footer-links .icon-retweet:before,
+  footer .footer-links .icon-bubble-dialog-bottom:before {
+    display: none;
+  }
+
+
+  /* --------------------------------------------------------------------------------------------------- */
+  /* ----------------------------------------- AOP BRAND END ------------------------------------------- */
+  /* --------------------------------------------------------------------------------------------------- */
+
+
+  /* ----------------------------------------- */
+  /* ------------ CORE CSS STYLES ------------ */
+  /* ----------------------------------------- */
+
+
+  /* ------- RESET ------- */
+
+  body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  a,
+  button {
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  hr,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  form {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+
+  /* ------- TESTING ------- */
+
+  .border-red {
+    border: 1px solid red;
+  }
+
+  .border-green {
+    border: 1px solid green;
+  }
+
+  .border-blue {
+    border: 1px solid blue;
+  }
+
+
+  /* ------- GLOBAL PAGE ------- */
+
+  body {
+    font-family: var(--font-family);
+    background-color: var(--white);
+  }
+
+  a:hover,
+  button:hover {
+    -webkit-transition: all 0.3s 0s ease;
+    -moz-transition: all 0.3s 0s ease;
+    -o-transition: all 0.3s 0s ease;
+    transition: all 0.3s 0s ease;
+    opacity: 0.8;
+  }
+
+  form,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    font-family: var(--font-family);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .mb-xl {
+    margin-bottom: 40px;
+  }
+
+  .mb-md {
+    margin-bottom: 10px;
+  }
+
+  .mb-sm {
+    margin-bottom: 5px;
+  }
+
+  .mb-lg {
+    margin-bottom: 20px;
+  }
+
+  .mb-0 {
+    margin-bottom: 0;
+  }
+
+  .ml-sm {
+    margin-left: 5px;
+  }
+
+  .mr-sm {
+    margin-right: 5px;
+  }
+
+  .text-normal {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .text-sm {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-xs {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .text-caption {
+    font-size: 9px;
+    line-height: 14px;
+  }
+
+  .eyebrow {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 2px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .text-link {
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
+  .title-link:hover {
+    text-decoration: underline;
+  }
+
+  .text-white {
+    color: var(--white);
+  }
+
+  .text-gray {
+    color: var(--gray-500);
+  }
+
+  .text-darkgray {
+    color: var(--gray-900);
+  }
+
+  .text-primary {
+    color: var(--primary);
+  }
+
+  .text-darkprimary {
+    color: var(--primary-dark);
+  }
+
+  .primary-bkg {
+    background: var(--primary);
+  }
+
+  .transparent-bkg {
+    background: var(--transparent);
+  }
+
+  .button.primary-bkg:hover {
+    background: var(--primary-dark);
+  }
+
+  .button.transparent-light-bkg,
+  .button.transparent-dark-bkg {
+    background: var(--transparent);
+  }
+
+  .button.transparent-light-bkg:hover {
+    background: var(--white-transparent);
+  }
+
+  .button.transparent-dark-bkg:hover {
+    background: var(--primary-transparent);
+  }
+
+  .border-primary {
+    border: 1px solid var(--primary);
+  }
+
+  .border-primary-dark {
+    border: 1px solid var(--primary-dark);
+  }
+
+  .border-white {
+    border: 1px solid var(--white);
+  }
+
+  .border-darkgray {
+    border: 1px solid var(--gray-900);
+  }
+
+  .button-lg {
+    padding: 7px 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin: 8px 5px;
+  }
+
+  .form-button-lg {
+    padding: 5px 20px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    margin: 8px 5px;
+  }
+
+  .button-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+
+  .title-3xl {
+    font-weight: bold;
+    font-size: 52px;
+    line-height: 58px;
+    letter-spacing: -1px;
+    padding-bottom: 10px;
+  }
+
+  .title-lg {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: -1px;
+    padding-bottom: 10px;
+  }
+
+  .title-md {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 34px;
+    letter-spacing: 0;
+    padding-bottom: 10px;
+  }
+
+  .title-xs {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0;
+    padding-bottom: 10px;
+  }
+
+  .buttonset-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .phone-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .center-justify {
+    justify-content: center;
+  }
+
+  .shadow-lg {
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+
+  .hr-light {
+    background-color: var(--gray-300);
+    height: 1px;
+    width: 100%;
+    margin: 30px 0;
+    border-style: none;
+  }
+
+  .text-nowrap {
+    white-space: nowrap;
+  }
+
+
+  /* ------- HERO BLOCK ------- */
+
+  .hero-block-video-background {
+    display: flex;
+    background-color: var(--transparent);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .hero-block-video-foreground,
+  .hero-block-video-background iframe {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  @media (min-aspect-ratio: 16/9) {
+    .hero-block-video-foreground {
+      height: 300%;
+      top: -100%;
+    }
+  }
+
+  @media (max-aspect-ratio: 16/9) {
+    .hero-block-video-foreground {
+      width: 300%;
+      left: -100%;
+    }
+  }
+
+  .hero-block-content {
+    max-width: 700px;
+  }
+
+  .hero-block-nav-container {
+    display: flex;
+  }
+
+  .hero-block-container {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    height: auto;
+    position: relative;
+    z-index: -99;
+  }
+
+  .hero-block-overlay {
+    z-index: 0;
+    width: 100%;
+    margin: 0;
+    background-color: var(--primary-video-transparent);
+    display: flex;
+  }
+
+  .hero-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .hero-block-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-block-nav-link,
+  .hero-block-logo-container {
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  .hero-block-nav-link {
+    margin-right: 50px;
+    margin-left: -15px;
+  }
+
+  .hero-block-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    min-height: inherit;
+  }
+
+  .hero-block-left-container {
+    padding: 30px 3% 30px;
+    width: auto;
+  }
+
+  .hero-block-right-container {
+    padding: 30px 3% 30px;
+    width: auto;
+  }
+
+
+  /* ------- LEAD FORM IN CARD ------- */
+
+  .lead-form-width {
+    width: 100%;
+    max-width: inherit;
+  }
+
+  .lead-form-card {
+    display: flex;
+    height: auto;
+    width: 100%;
+    min-width: 300px;
+    border: 1px solid #e2e8f0;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: var(--white);
+    -webkit-box-shadow: 3px 3px 12px 3px rgba(0, 0, 0, 0.1);
+    /* change 0.1 to increase shadow intensity */
+    box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.1);
+    /* change 0.1 to increase shadow intensity */
+    padding: 10px 10px 0;
+  }
+
+  .lead-form-container {
+    display: flex;
+  }
+
+  .two-col-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    /* change from row to column to stack fields */
+  }
+
+  .lead-form-input-container {
+    display: flex;
+    width: 100%;
+  }
+
+  #fname,
+  #lname,
+  #email,
+  #phone,
+  #street,
+  #zip {
+    width: 100%;
+    margin: 6px 3px;
+  }
+
+  .form-inner input[type=text],
+  .form-inner input[type=email],
+  .form-inner input[type=tel] {
+    border: 1px solid #d2d2d2;
+    height: inherit;
+    color: var(--gray-900);
+    background: var(--white);
+    padding: 8px;
+    margin: 10px;
+    border-radius: 3px;
+    font-size: 14px;
+    font-family: var(--font-family);
+  }
+
+  .form-error-message {
+    font-size: 11px;
+    white-space: nowrap;
+    text-align: left;
+    color: red;
+    font-weight: 600;
+    line-height: 1px;
+    position: relative;
+    top: -3px;
+    padding-left: 0;
+    font-family: sans-serif;
+  }
+
+  form input.invalid[type=text],
+  form input.invalid[type=email],
+  form input.invalid[type=tel] {
+    border: 2px solid red;
+    color: red;
+  }
+
+  form input.invalid[type=text]::placeholder,
+  form input.invalid[type=email]::placeholder,
+  form input.invalid[type=tel]::placeholder {
+    color: red;
+  }
+
+
+  /* ------- CENTERED BLOCK ------- */
+
+  .centered-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .centered-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .centered-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 10px 60px;
+  }
+
+  .centered-block-content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  /* ------- BENEFITS BLOCK ------- */
+
+  .benefits-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .benefits-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .benefits-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 10px 20px;
+  }
+
+  .benefits-block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .benefits-block-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .benefits-block-item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--gray-100);
+    border-radius: 8px;
+    padding: 20px 4% 20px;
+    margin: 40px 10px;
+    max-width: 600px;
+    width: 33%;
+    /* Change widths as needed - or inherit for variable widths */
+  }
+
+  .benefits-block-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -70px auto 15px;
+  }
+
+  .benefits-block-image-1 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .benefits-block-image-2 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .benefits-block-image-3 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .benefits-block-image-4 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .benefits-block-image-5 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .benefits-block-image-6 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+
+  /* ------- INFOLEFT BLOCK ------- */
+
+  .infoleft-block-content {
+    max-width: 700px;
+  }
+
+  .infoleft-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .infoleft-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .infoleft-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .infoleft-block-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0;
+  }
+
+  .infoleft-block-left-container {
+    padding: 30px 3% 30px;
+    width: auto;
+  }
+
+  .infoleft-block-right-container {
+    padding: 20px 2%;
+    width: 50%;
+    display: flex;
+  }
+
+  .infoleft-block-right-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .infoleft-block-image-1 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .inset-image {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+
+  /* ------- INFORIGHT BLOCK ------- */
+
+  .inforight-block-content {
+    max-width: 700px;
+  }
+
+  .inforight-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .inforight-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .inforight-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+
+  .inforight-block-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0;
+  }
+
+  .inforight-block-right-container {
+    padding: 30px 3% 30px;
+    width: auto;
+  }
+
+  .inforight-block-left-container {
+    padding: 20px 2%;
+    width: 50%;
+    display: flex;
+  }
+
+  .inforight-block-left-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .inforight-block-image-1 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .inset-image {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  .link-list-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .link-list-wrapper-1 {
+    margin: 0;
+  }
+
+  .link-list-wrapper-2 {
+    margin-left: 4%;
+  }
+
+
+  /* ------- CTA BLOCK ------- */
+
+  .cta-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .cta-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--primary-light);
+    display: flex;
+  }
+
+  .cta-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 10px 60px;
+  }
+
+  .cta-block-content {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .social-media-icons-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-media-icons {
+    width: 48px;
+    height: 48px;
+    margin: 10px 3%;
+  }
+
+
+  /* ------- INFOBAR BLOCK ------- */
+
+  .infobar-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .infobar-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--gray-500);
+    display: flex;
+  }
+
+  .infobar-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px 10px;
+  }
+
+  .infobar-block-content {
+    max-width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* ------- RESPONSIVE ------- */
+
+  @media screen and (max-width: 768px) {
+
+    /* AOP Site Update */
+    .content-wrapper {
+      margin-top: 69px;
+    }
+
+    .hero-block-video-foreground,
+    .hero-block-video-background iframe,
+    .hero-block-video-background {
+      display: none;
+    }
+
+    .title-3xl {
+      font-size: 42px;
+      line-height: 46px;
+      letter-spacing: 0;
+    }
+
+    .hero-block-content-wrapper {
+      flex-direction: column;
+    }
+
+    .infoleft-block-content-wrapper {
+      flex-direction: column-reverse;
+    }
+
+    .inforight-block-content-wrapper {
+      flex-direction: column;
+    }
+
+    .hero-block-right-container {
+      width: 92%;
+    }
+
+    .hero-block-left-container {
+      text-align: center;
+    }
+
+    .buttonset-container,
+    .phone-container {
+      justify-content: center;
+    }
+
+    .infoleft-block-right-container,
+    .inforight-block-left-container {
+      width: 92%;
+    }
+
+    .lead-form-card {
+      min-width: 260px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    .benefits-block-row {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .benefits-block-item-container {
+      margin: 40px auto;
+      width: 92%;
+      justify-content: center;
+    }
+
+    .link-list-wrapper-2 {
+      margin-left: 3%;
+    }
+
+    .link-list-container {
+      justify-content: center;
+    }
+
+  }
+
+
+  @media screen and (max-width: 480px) {
+
+    .phone-container {
+      justify-content: center;
+    }
+
+    .buttonset-container {
+      text-align: center;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .infoleft-block-wrapper,
+    .inforight-block-wrapper {
+      padding: 20px 0;
+    }
+
+    .hero-block-nav-link,
+    .hero-block-logo-container {
+      margin: 10px;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .title-3xl {
+      font-size: 32px;
+      line-height: 36px;
+      letter-spacing: 0;
+    }
+
+    .title-lg {
+      font-size: 26px;
+      line-height: 30px;
+    }
+
+    .title-xs {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 21px;
+    }
+
+    .hero-block-left-container {
+      padding: 30px 10px 30px;
+    }
+
+    a.button-lg {
+      width: 90%;
+    }
+
+    .link-list-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .link-list-wrapper-2 {
+      margin: 0;
+    }
+
+    .infobar-block-content {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .two-col-form {
+      flex-direction: column;
+    }
+
+  }
+
+
+  /* ---------------------------------------------- */
+  /* ------------ YOUR OVERRIDE STYLES ------------ */
+  /* -------------Just Changed Styles!------------- */
+  /* ---------------------------------------------- */
+
+  .centered-block-wrapper {
+    padding: 70px 10px 10px;
+    /* Temporary style override for default layout */
+  }
+
+  .inforight-block-wrapper {
+    margin: 0 auto 40px;
+    /* Temporary style override for default layout */
+  }
+
+  @media screen and (max-width: 768px) {
+
+    .some-element-selector {
+      width: 80%;
+    }
+
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .some-element-selector {
+      width: 100%;
+    }
+
+  }
+</style>
+
+
+<!-- IMPORT FONTAWESOME (https://fontawesome.com/search) -->
+
+<script src="https://glnmedia.s3.amazonaws.com/landing/master-template/js/fontawesome/all.min.js"></script>
+
+
+<!-- HERO BLOCK START -->
+
+<div class="hero-block-container">
+
+  <!-- <div class="hero-block-video-background">
+    <div class="hero-block-video-foreground">
+      <iframe width="0" height="0" src="https://www.youtube.com/embed/VIDEO-ID?loop=1&autoplay=1&mute=1&playlist=VIDEO_ID"
+        frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+    </div>
+  </div> -->
+
+  <div class="hero-block-overlay">
+    <div class="hero-block-wrapper">
+
+      <div class="hero-block-nav-container">
+
+        <div class="hero-block-logo-container"><a href="#"><img
+              src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/logo.png" alt="" title="Home" /></a>
+        </div>
+
+        <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a>
+
+      </div>
+
+      <div class="hero-block-content-wrapper">
+
+        <div class="hero-block-left-container">
+
+          <div class="hero-block-content">
+
+            <div class="eyebrow text-white">Interdum pharetra</div>
+
+            <div class="title-3xl text-white">Dui quam varius feugiat.</div>
+
+            <div class="text-normal text-white mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut
+              laoreet ex. Aliquam semper nisi eu volutpat&nbsp;scelerisque.
+            </div>
+
+            <div class="buttonset-container">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+                  Ipsum
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-white border-white transparent-light-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="hero-block-right-container">
+
+          <!-- LEAD FORM IN CARD START -->
+
+          <div class="lead-form-container">
+            <div class="lead-form-card">
+
+              <!-- LEAD FORM ONLY START - Add Fusionary_Form_Security JS Dependendancies to CMS Page -->
+
+              <form class="recaptcha-form lead-form-width" method="post">
+                <div class="form-inner">
+
+                  <input type="hidden" name="action-key" value="add-FormKey-value-here" />
+
+                  <h3>Request Information</h3>
+                  <p class="text-sm mb-md">Lorem ipsum dolor sit amet, consectetur elit.</p>
+
+                  <div class="form-error-message" style="display: none;">Oops! Something went wrong - try again.</div>
+
+                  <div class="two-col-form">
+                    <div class="lead-form-input-container">
+                      <input type="text" id="fname" name="fname" placeholder="First Name" required="">
+                    </div>
+                    <div class="lead-form-input-container">
+                      <input type="text" id="lname" name="lname" placeholder="Last Name" required="">
+                    </div>
+                  </div>
+                  <div class="two-col-form">
+                    <div class="lead-form-input-container">
+                      <input type="email" id="email" name="Email" placeholder="Email" required="">
+                    </div>
+                    <div class="lead-form-input-container">
+                      <input type="tel" id="phone" maxlength="20" name="phone" placeholder="Phone" required="">
+                    </div>
+                  </div>
+
+                  <!-- <div class="radio-question">
+                     <div><label for="NewToHomeSchooling">Are you new to homeschooling?</label></div>
+                 </div>
+                 <div class="radio-items">
+                     <label>Yes <input style="margin-right: 15px;" id="NewToHomeSchooling" name="NewToHomeSchooling" type="radio" value="Yes" checked="checked"></label>
+                     <label>No <input id="NewToHomeSchooling" name="NewToHomeSchooling" type="radio" value="No"></label>
+                 </div> -->
+
+                  <div style="display: flex; align-items: center; justify-content: space-between;">
+
+                    <div class="text-caption" style="padding: 8px 5px 20px; max-width: 230px;">By
+                      completing this form, you agree to receiving other email communication about AOP and this
+                      program. See our <a href="/terms-and-conditions" target="terms" class="text-caption">Terms</a>
+                      and&nbsp;<a href="/privacy-policy" target="terms" class="text-caption">Policy</a>.
+                    </div>
+
+                    <div>
+                      <button class="button form-button-lg button-text text-white border-primary primary-bkg"
+                        type="submit">SEND<span class="ml-sm"><i class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
+
+                  </div>
+
+                </div>
+              </form>
+
+              <!-- LEAD FORM ONLY END -->
+
+            </div>
+          </div>
+
+          <!-- LEAD FORM IN CARD END -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- HERO BLOCK END -->
+
+
+
+<!-- CENTERED BLOCK START -->
+
+<div class="centered-block-container">
+  <div class="centered-block-overlay">
+    <div class="centered-block-wrapper">
+
+      <div class="centered-block-content">
+
+        <div class="eyebrow text-gray text-center mb-sm">Enim sodales sagittis</div>
+
+        <div class="title-lg text-darkgray text-center">Lorem turpis enim pulvinar sit&nbsp;fringilla.</div>
+
+        <div class="text-normal text-gray mb-md text-center">Phasellus lorem quam molestie id quisque diam aenean nulla
+          in. Accumsan
+          in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra&nbsp;nulla.
+        </div>
+
+        <!-- <div class="buttonset-container center-justify">
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CENTERED BLOCK END -->
+
+
+
+<!-- BENEFITS BLOCK START -->
+
+<div class="benefits-block-container">
+  <div class="benefits-block-overlay">
+    <div class="benefits-block-wrapper">
+
+      <div class="benefits-block-content">
+
+        <div class="benefits-block-row">
+          <!-- Max 3 / Row -->
+
+          <div class="benefits-block-item-container">
+
+            <div class="benefits-block-item-info">
+
+              <div class="benefits-block-image-container shadow-lg benefits-block-image-1">
+                <div class="title-3xl text-white"><i></i></div>
+              </div>
+              <p class="text-center mb-md">
+                <a href="#" target="" class="title-xs title-link text-darkprimary">Aenean nulla&nbsp;in
+                  <i class="fa-solid fa-download"></i></a>
+              </p>
+              <p class="text-center text-sm text-gray mb-md">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus et magna sit. <a href="#" target=""
+                  class="text-link text-sm text-darkprimary">Learn More <i class="fa-solid fa-angle-right"></i></a>
+              </p>
+
+            </div>
+
+            <div class="buttonset-container center-justify">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="benefits-block-item-container">
+
+            <div class="benefits-block-item-info">
+
+              <div class="benefits-block-image-container shadow-lg benefits-block-image-1">
+                <div class="title-3xl text-white"><i></i></div>
+              </div>
+              <p class="text-center mb-md">
+                <a href="#" target="" class="title-xs title-link text-darkprimary">Aenean nulla&nbsp;in
+                  <i class="fa-solid fa-download"></i></a>
+              </p>
+              <p class="text-center text-sm text-gray mb-md">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus et magna sit. <a href="#" target=""
+                  class="text-link text-sm text-darkprimary">Learn More <i class="fa-solid fa-angle-right"></i></a>
+              </p>
+
+            </div>
+
+            <div class="buttonset-container center-justify">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="benefits-block-item-container">
+
+            <div class="benefits-block-item-info">
+
+              <div class="benefits-block-image-container shadow-lg benefits-block-image-1">
+                <div class="title-3xl text-white"><i></i></div>
+              </div>
+              <p class="text-center mb-md">
+                <a href="#" target="" class="title-xs title-link text-darkprimary">Aenean nulla&nbsp;in
+                  <i class="fa-solid fa-download"></i></a>
+              </p>
+              <p class="text-center text-sm text-gray mb-md">
+                Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus et magna sit. <a href="#" target=""
+                  class="text-link text-sm text-darkprimary">Learn More <i class="fa-solid fa-angle-right"></i></a>
+              </p>
+
+            </div>
+
+            <div class="buttonset-container center-justify">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS BLOCK END -->
+
+
+
+<!-- INFOLEFT BLOCK START -->
+
+<div class="infoleft-block-container">
+  <div class="infoleft-block-overlay">
+    <div class="infoleft-block-wrapper">
+
+      <div class="infoleft-block-content-wrapper">
+
+        <div class="infoleft-block-left-container">
+
+          <div class="infoleft-block-content">
+
+            <div class="eyebrow text-gray mb-sm">Interdum pharetra</div>
+
+            <div class="title-md text-darkgray">Elementum semper aliquet in&nbsp;non.</div>
+
+            <div class="text-normal text-gray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In purus
+              mauris sagittis aliquam. Sit imperdiet sit lacinia convallis est. Neque, et tempus ut ultricies at quisque
+              sed viverra et. Amet tortor dictum tristique augue purus arcu, sit&nbsp;fringilla.
+            </div>
+
+            <div class="buttonset-container">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+                  Ipsum
+                  <span><i class="fa-solid fa-arrow-up"></i></span>
+                </a>
+              </div>
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="hr-light" />
+
+            <div class="text-sm text-gray mb-lg">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum
+              ut quis fringilla aliquam libero vivamus maecenas&nbsp;egestas.”
+              <span class="text-xs text-nowrap">
+                - Jane Smith - Somewhere, USA
+              </span>
+            </div>
+
+            <div class="phone-container"><a href="tel:+18000000000"
+                class="button button-lg text-normal text-darkgray border-darkgray transparent-dark-bkg">Questions?
+                <span class="mr-sm text-nowrap"><i
+                    class="fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="infoleft-block-right-container">
+
+          <div class="infoleft-block-right-content">
+            <div class="infoleft-block-image-1 inset-image shadow-lg"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFOLEFT BLOCK END -->
+
+
+
+<!-- INFORIGHT BLOCK START -->
+
+<div class="inforight-block-container">
+  <div class="inforight-block-overlay">
+    <div class="inforight-block-wrapper">
+
+      <div class="inforight-block-content-wrapper">
+
+        <div class="inforight-block-left-container">
+
+          <div class="inforight-block-left-content">
+            <div class="inforight-block-image-1 inset-image shadow-lg"></div>
+          </div>
+
+        </div>
+
+        <div class="inforight-block-right-container">
+
+          <div class="inforight-block-content">
+
+            <div class="eyebrow text-gray mb-sm">Felis mattis</div>
+
+            <div class="title-md text-darkgray">Ultrices vitae pulvinar est.</div>
+
+            <div class="text-normal text-gray mb-md">Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis
+              bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem
+              arcu pretium pharetra at. Lectus viverra dui tellus ornare&nbsp;pharetra.
+            </div>
+
+            <div class="buttonset-container">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+                  Ipsum
+                  <span><i class="fa-solid fa-arrow-up"></i></span>
+                </a>
+              </div>
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="hr-light" />
+
+            <div class="link-list-container">
+
+              <div class="link-list-wrapper-1 text-sm text-gray mb-lg">
+
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Short list item names here&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;If long names, use 1 list column&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Lorem ipsum dolor&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Pulvinar laoreet sagittis &nbsp;<i></i></a>
+                </div>
+
+              </div>
+
+              <div class="link-list-wrapper-2 text-sm text-gray mb-lg">
+
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Lorem ipsum dolor&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Enim lectus risus ultrices&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Lorem ipsum dolor&nbsp;<i></i></a>
+                </div>
+                <div class="link-list-item mb-md">
+                  <a href="#" target="_blank" class="text-sm text-darkprimary text-link"><i
+                      class="fa-solid fa-angle-right"></i>&nbsp;Consectetur adipiscing&nbsp;<i></i></a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFORIGHT BLOCK END -->
+
+
+<!-- CTA BLOCK START -->
+
+<div class="cta-block-container">
+  <div class="cta-block-overlay">
+    <div class="cta-block-wrapper">
+
+      <div class="cta-block-content">
+
+        <div class="eyebrow text-gray text-center mb-sm">Enim sodales sagittis</div>
+
+        <div class="title-lg text-darkgray text-center">Lorem turpis enim pulvinar sit&nbsp;fringilla.</div>
+
+        <div class="text-normal text-gray mb-md text-center">Phasellus lorem quam molestie id quisque diam aenean nulla
+          in. Accumsan
+          in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra&nbsp;nulla.
+        </div>
+
+        <div class="social-media-icons-container mb-md">
+          <a href="#" class="social-media-icons text-darkprimary" target="_blank"><i
+              class="fa-brands fa-facebook-square fa-3x"></i></a>
+          <a href="#" class="social-media-icons text-darkprimary" target="_blank"><i
+              class="fa-brands fa-twitter-square fa-3x"></i></a>
+          <a href="#" class="social-media-icons text-darkprimary" target="_blank"><i
+              class="fa-brands fa-pinterest-square fa-3x"></i></a>
+          <a href="#" class="social-media-icons text-darkprimary" target="_blank"><i
+              class="fa-brands fa-youtube-square fa-3x"></i></a>
+        </div>
+
+        <!-- <div class="buttonset-container center-justify">
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- CTA BLOCK END -->
+
+
+<!-- INFOBAR BLOCK START -->
+
+<div class="infobar-block-container">
+  <div class="infobar-block-overlay">
+    <div class="infobar-block-wrapper">
+
+      <div class="infobar-block-content">
+
+        <div class="text-xs text-white">Copyright footer or CTA info here.</div>
+
+        <!-- <div class="buttonset-container center-justify">
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+          <div class="button-container"><a href="#" target=""
+              class="button button-lg button-text text-white border-white transparent-light-bkg">Lorem
+              Ipsum
+              <span><i></i></span>
+            </a>
+          </div>
+        </div> -->
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFOBAR BLOCK END -->
