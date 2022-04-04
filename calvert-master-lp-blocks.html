@@ -1,8 +1,10 @@
 <style>
   /* ----------------------------------------------- */
-  /* ------------ MASTER TEMPLATE v1.01 ------------ */
+  /* ------------ MASTER TEMPLATE v1.02 ------------ */
   /* ----------------------------------------------- */
-
+  /* 1. Added 480w responsive to Form terms and submit button. 
+     2. Reduced Form Shadow intensity...plus various form style tweaks.
+  */
 
   /* ------- RECOMMENDED TEMPLATE USE ------- */
 
@@ -540,11 +542,28 @@
     /* change 0.1 to increase shadow intensity */
     box-shadow: 3px 3px 12px 2px rgba(0, 0, 0, 0.1);
     /* change 0.1 to increase shadow intensity */
-    padding: 10px 10px 0;
+    padding: 10px;
   }
 
   .lead-form-container {
     display: flex;
+  }
+
+  .lead-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .lead-form-terms {
+    padding: 8px 5px;
+    max-width: 230px;
+  }
+
+  .lead-form-submit-btn-container {
+    display: flex;
+    width: 100%;
+    justify-content: end;
   }
 
   .two-col-form {
@@ -1129,8 +1148,22 @@
       padding: 30px 10px 30px;
     }
 
+    .lead-form-footer {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .lead-form-terms {
+      padding: 8px 5px;
+      max-width: 100%;
+    }
+
     a.button-lg {
       width: 90%;
+    }
+
+    .lead-form-submit-btn {
+      width: 100%;
     }
 
     .link-list-container {
@@ -1263,10 +1296,11 @@
 
                   <input type="hidden" name="action-key" value="add-FormKey-value-here" />
 
-                  <h3>Request Information</h3>
-                  <p class="text-sm mb-md">Lorem ipsum dolor sit amet, consectetur elit.</p>
+                  <h3 class="ml-sm">Request Information</h3>
+                  <p class="text-sm mb-md ml-sm">Lorem ipsum dolor sit amet, consec tetur&nbsp;elit.</p>
 
-                  <div class="form-error-message" style="display: none;">Oops! Something went wrong - try again.</div>
+                  <div class="form-error-message ml-sm" style="display: none;">Oops! Something went wrong - try again.
+                  </div>
 
                   <div class="two-col-form">
                     <div class="lead-form-input-container">
@@ -1293,16 +1327,17 @@
                      <label>No <input id="NewToHomeSchooling" name="NewToHomeSchooling" type="radio" value="No"></label>
                  </div> -->
 
-                  <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div class="lead-form-footer">
 
-                    <div class="text-caption" style="padding: 8px 5px 20px; max-width: 230px;">By
-                      completing this form, you agree to receiving other email communication about AOP and this
+                    <div class="lead-form-terms text-caption">By
+                      completing this form, you agree to receiving other email communication about this
                       program. See our <a href="/terms-and-conditions" target="terms" class="text-caption">Terms</a>
                       and&nbsp;<a href="/privacy-policy" target="terms" class="text-caption">Policy</a>.
                     </div>
 
-                    <div>
-                      <button class="button form-button-lg button-text text-white border-primary primary-bkg"
+                    <div class="lead-form-submit-btn-container">
+                      <button
+                        class="lead-form-submit-btn button form-button-lg button-text text-white border-primary primary-bkg"
                         type="submit">SEND<span class="ml-sm"><i class="fa-solid fa-arrow-right"></i></span></button>
                     </div>
 
