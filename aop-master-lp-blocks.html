@@ -1063,6 +1063,225 @@
   }
 
 
+  /* ------- TABS BLOCK ------- */
+
+  .tabs-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .tabs-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .tabs-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .tabs-block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .master-tab-wrap {
+    -webkit-transition: 0.3s box-shadow ease;
+    transition: 0.3s box-shadow ease;
+    border-radius: 6px;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    list-style: none;
+    background-color: var(--white);
+    margin: 40px 0;
+  }
+
+  .master-tab-wrap .tab {
+    display: none;
+  }
+
+  .master-tab-wrap .tab:checked+label+.tab-content {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+
+  .master-tab-wrap .tab:checked+label {
+    background-color: var(--white);
+    box-shadow: 0 -1px 0 var(--white) inset;
+    cursor: default;
+    /* border: 1px solid var(--primary); */
+    color: var(--gray-900);
+  }
+
+  .master-tab-wrap .tab:checked+label:hover {
+    box-shadow: 0 -1px 0 var(--white) inset;
+    background-color: var(--white);
+  }
+
+  .master-tab-wrap .tab+label {
+    color: var(--gray-500);
+    box-shadow: 0 -1px 0 #eee inset;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 5px;
+    width: 14%;
+    /* Change width % to fit number of tabs */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1%;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.07);
+    font-weight: bold;
+  }
+
+  .master-tab-wrap .tab+label:hover {
+    background-color: #ffffff;
+    box-shadow: 0 1px 0 #f4f4f4 inset;
+    color: var(--gray-900);
+  }
+
+  .master-tab-wrap .tab-content {
+    padding: 1%;
+    background-color: transparent;
+    position: absolute;
+    width: 99%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    /* -webkit-transform: translateY(-3px);
+    transform: translateY(-3px); */
+    /* border-radius: 5px; */
+    order: 99;
+  }
+
+  .master-tab-wrap .tab-content-wrapper {
+    /* border-radius: 5px; */
+    border-top: 1px solid #e6e6e6;
+    padding: 20px 0 10px;
+    margin: 20px auto;
+    width: 97%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .tab-label1 {
+    background-color: #e9edff;
+    border: 1px solid #7686c5;
+  }
+
+  .tab-label1:checked+label {
+    border: 1px solid #7686c5;
+  }
+
+  .tab-label2 {
+    background-color: #f5ffe7;
+    border: 1px solid #8dc740;
+  }
+
+  .tab-label2:checked+label {
+    border: 1px solid #8dc740;
+  }
+
+  .tab-label3 {
+    background-color: #fff4e3;
+    border: 1px solid #fcb13b;
+  }
+
+  .tab-label3:checked+label {
+    border: 1px solid #fcb13b;
+  }
+
+  .tab-label4 {
+    background-color: #ffe4e4;
+    border: 1px solid #f37c7c;
+  }
+
+  .tab-label4:checked+label {
+    border: 1px solid #f37c7c;
+  }
+
+  .tab-label5 {
+    background-color: #ddfaff;
+    border: 1px solid #2ab5cd;
+  }
+
+  .tab-label5:checked+label {
+    border: 1px solid #2ab5cd;
+  }
+
+  .tab-label6 {
+    background-color: #e9edff;
+    border: 1px solid #7686c5;
+  }
+
+  .tab-label6:checked+label {
+    border: 1px solid #7686c5;
+  }
+
+  /* --- Not Used --- */
+
+  /* .master-tab-wrap .tab:first-of-type:not(:last-of-type)+label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .master-tab-wrap .tab:not(:first-of-type):not(:last-of-type)+label {
+    border-radius: 0;
+  }
+
+  .master-tab-wrap .tab:last-of-type:not(:first-of-type)+label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  } */
+
+  /* .master-tab-wrap:hover {
+    box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+  } */
+
+
   /* ------- RESPONSIVE ------- */
 
   @media screen and (max-width: 768px) {
@@ -1559,6 +1778,117 @@
 
 <!-- BENEFITS BLOCK END -->
 
+
+
+<!-- TABS BLOCK START -->
+
+<div class="tabs-block-container">
+  <div class="tabs-block-overlay">
+    <div class="tabs-block-wrapper">
+
+      <div class="tabs-block-content">
+
+
+
+
+        <div class="master-tab-wrap">
+
+          <!-- active tab on page load gets checked attribute -->
+          <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+          <label class="text-md tab-label1" for="tab1">Bible</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">Bible</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+          <input type="radio" id="tab2" name="tabGroup1" class="tab">
+          <label class="text-md tab-label2" for="tab2">History & Geography</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">History & Geography</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+          <input type="radio" id="tab3" name="tabGroup1" class="tab">
+          <label class="text-md tab-label3" for="tab3">Language Arts</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">Language Arts</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+          <input type="radio" id="tab4" name="tabGroup1" class="tab">
+          <label class="text-md tab-label4" for="tab4">Math</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">Math</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+          <input type="radio" id="tab5" name="tabGroup1" class="tab">
+          <label class="text-md tab-label5" for="tab5">Science</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">Science</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+          <input type="radio" id="tab6" name="tabGroup1" class="tab">
+          <label class="text-md tab-label6" for="tab6">Electives</label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+              <div class="title-md">Electives</div>
+              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
+                Vestibulum turpis sem, aliquet eget,
+                lobortis
+                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
+                nec,
+                vulputate eget, arcu.</div>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABS BLOCK END -->
 
 
 <!-- INFOLEFT BLOCK START -->
