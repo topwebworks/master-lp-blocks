@@ -1114,7 +1114,7 @@
     position: relative;
     list-style: none;
     background-color: var(--white);
-    margin: 40px 0;
+    margin: 40px 0 20px;
   }
 
   .master-tab-wrap .tab {
@@ -1149,6 +1149,8 @@
   }
 
   .master-tab-wrap .tab+label {
+    width: 14%;
+    /* Change width % to fit number of tabs */
     color: var(--gray-500);
     box-shadow: 0 -1px 0 #eee inset;
     border-radius: 6px 6px 0 0;
@@ -1162,18 +1164,24 @@
     text-align: center;
     -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
     transition: 0.3s background-color ease, 0.3s box-shadow ease;
-    height: 100px;
+    height: 120px;
     box-sizing: border-box;
     padding: 5px;
-    width: 14%;
-    /* Change width % to fit number of tabs */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0 1%;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.07);
-    font-weight: bold;
+  }
+
+  .master-tab-wrap .tab+label span {
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: var(--font-family);
   }
 
   .master-tab-wrap .tab+label:hover {
@@ -1216,6 +1224,16 @@
     border: 1px solid #7686c5;
   }
 
+  .tab-label1:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 43px;
+    height: auto;
+    margin: 0;
+  }
+
   .tab-label2 {
     background-color: #f5ffe7;
     border: 1px solid #8dc740;
@@ -1223,6 +1241,16 @@
 
   .tab-label2:checked+label {
     border: 1px solid #8dc740;
+  }
+
+  .tab-label2:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/history-geography.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 40px;
+    height: auto;
+    margin: 0;
   }
 
   .tab-label3 {
@@ -1234,6 +1262,16 @@
     border: 1px solid #fcb13b;
   }
 
+  .tab-label3:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/language-arts.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 36px;
+    height: auto;
+    margin: 0;
+  }
+
   .tab-label4 {
     background-color: #ffe4e4;
     border: 1px solid #f37c7c;
@@ -1241,6 +1279,16 @@
 
   .tab-label4:checked+label {
     border: 1px solid #f37c7c;
+  }
+
+  .tab-label4:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/mathematics.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 35px;
+    height: auto;
+    margin: 0;
   }
 
   .tab-label5 {
@@ -1252,6 +1300,16 @@
     border: 1px solid #2ab5cd;
   }
 
+  .tab-label5:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/science.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 40px;
+    height: auto;
+    margin: 0;
+  }
+
   .tab-label6 {
     background-color: #e9edff;
     border: 1px solid #7686c5;
@@ -1261,7 +1319,18 @@
     border: 1px solid #7686c5;
   }
 
-  /* --- Not Used --- */
+  .tab-label6:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/electives.svg");
+    filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%);
+    display: block;
+    width: 100%;
+    max-width: 60px;
+    min-width: 35px;
+    height: auto;
+    margin: 0;
+  }
+
+  /* --- Saved --- */
 
   /* .master-tab-wrap .tab:first-of-type:not(:last-of-type)+label {
     border-top-right-radius: 0;
@@ -1291,9 +1360,14 @@
       margin-top: 69px;
     }
 
+    .master-tab-wrap .tab+label {
+      height: 90px;
+    }
+
     .hero-block-video-foreground,
     .hero-block-video-background iframe,
-    .hero-block-video-background {
+    .hero-block-video-background,
+    .master-tab-wrap .tab+label span {
       display: none;
     }
 
@@ -1364,6 +1438,10 @@
 
 
   @media screen and (max-width: 480px) {
+
+    .master-tab-wrap .tab+label {
+      height: 60px;
+    }
 
     .phone-container {
       justify-content: center;
@@ -1788,14 +1866,13 @@
 
       <div class="tabs-block-content">
 
-
-
+        <!-- Tabs Standalone Start -->
 
         <div class="master-tab-wrap">
 
           <!-- active tab on page load gets checked attribute -->
           <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-          <label class="text-md tab-label1" for="tab1">Bible</label>
+          <label class="tab-label1" for="tab1"><span>Bible</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">Bible</div>
@@ -1809,7 +1886,7 @@
           </div>
 
           <input type="radio" id="tab2" name="tabGroup1" class="tab">
-          <label class="text-md tab-label2" for="tab2">History & Geography</label>
+          <label class="tab-label2" for="tab2"><span>History & Geography</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">History & Geography</div>
@@ -1823,7 +1900,7 @@
           </div>
 
           <input type="radio" id="tab3" name="tabGroup1" class="tab">
-          <label class="text-md tab-label3" for="tab3">Language Arts</label>
+          <label class="tab-label3" for="tab3"><span>Language Arts</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">Language Arts</div>
@@ -1837,7 +1914,7 @@
           </div>
 
           <input type="radio" id="tab4" name="tabGroup1" class="tab">
-          <label class="text-md tab-label4" for="tab4">Math</label>
+          <label class="tab-label4" for="tab4"><span>Math</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">Math</div>
@@ -1851,7 +1928,7 @@
           </div>
 
           <input type="radio" id="tab5" name="tabGroup1" class="tab">
-          <label class="text-md tab-label5" for="tab5">Science</label>
+          <label class="tab-label5" for="tab5"><span>Science</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">Science</div>
@@ -1865,7 +1942,7 @@
           </div>
 
           <input type="radio" id="tab6" name="tabGroup1" class="tab">
-          <label class="text-md tab-label6" for="tab6">Electives</label>
+          <label class="tab-label6" for="tab6"><span>Electives</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
               <div class="title-md">Electives</div>
@@ -1880,8 +1957,7 @@
 
         </div>
 
-
-
+        <!-- Tabs Standalone End -->
 
       </div>
     </div>
