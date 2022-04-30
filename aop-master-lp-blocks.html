@@ -1100,6 +1100,23 @@
     width: 100%;
   }
 
+  .master-tab-wrap .tab-content-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+  }
+
+  .master-tab-wrap .tab-content-left-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    height: 100%;
+    padding-right: 4%;
+  }
+
   .master-tab-wrap {
     -webkit-transition: 0.3s box-shadow ease;
     transition: 0.3s box-shadow ease;
@@ -1211,9 +1228,36 @@
     margin: 20px auto;
     width: 97%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+
+    height: auto;
+    align-items: center;
   }
+
+  .master-tab-wrap .tab-content-right-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .master-tab-wrap .tab-content-image-1 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .master-tab-wrap .inset-image {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+
+
+
+
+
 
   .tab-label1 {
     background-color: #e9edff;
@@ -1358,6 +1402,21 @@
     /* AOP Site Update */
     .content-wrapper {
       margin-top: 69px;
+    }
+
+    .master-tab-wrap .tab-content-wrapper {
+      /* border-radius: 5px; */
+      flex-direction: column;
+    }
+
+    .master-tab-wrap .tab-content-left-container {
+      width: 100%;
+      padding: 10px auto;
+    }
+
+    .master-tab-wrap .tab-content-right-container {
+      width: 90%;
+      margin: 20px auto;
     }
 
     .master-tab-wrap .tab+label {
@@ -1866,98 +1925,277 @@
 
       <div class="tabs-block-content">
 
-        <!-- Tabs Standalone Start -->
+        <!-- Tabs Standalone START -->
 
         <div class="master-tab-wrap">
 
-          <!-- active tab on page load gets checked attribute -->
+          <!-- Tab 1 START -->
+
+          <!-- active tab on page load gets "checked" attribute -->
           <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
           <label class="tab-label1" for="tab1"><span>Bible</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">Bible</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Bible</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Tab 1 END -->
+
+          <!-- Tab 2 START -->
 
           <input type="radio" id="tab2" name="tabGroup1" class="tab">
           <label class="tab-label2" for="tab2"><span>History & Geography</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">History & Geography</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">History & Geography</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Tab 2 END -->
+
+          <!-- Tab 3 START -->
 
           <input type="radio" id="tab3" name="tabGroup1" class="tab">
           <label class="tab-label3" for="tab3"><span>Language Arts</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">Language Arts</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Language Arts</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Tab 3 END -->
+
+          <!-- Tab 4 START -->
 
           <input type="radio" id="tab4" name="tabGroup1" class="tab">
           <label class="tab-label4" for="tab4"><span>Math</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">Math</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Math</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Tab 4 END -->
+
+          <!-- Tab 5 START -->
 
           <input type="radio" id="tab5" name="tabGroup1" class="tab">
           <label class="tab-label5" for="tab5"><span>Science</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">Science</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Science</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          <!-- Tab 5 END -->
+
+          <!-- Tab 6 START -->
 
           <input type="radio" id="tab6" name="tabGroup1" class="tab">
           <label class="tab-label6" for="tab6"><span>Electives</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper">
-              <div class="title-md">Electives</div>
-              <div class="text-normal text-darkgray mb-md">Praesent nonummy mi in odio. Nullam accumsan lorem in dui.
-                Vestibulum turpis sem, aliquet eget,
-                lobortis
-                pellentesque, rutrum eu, nisl. Nullam accumsan lorem in dui. Donec pede justo, fringilla vel, aliquet
-                nec,
-                vulputate eget, arcu.</div>
+
+              <div class="tab-content-left-container">
+                <div class="title-md">Electives</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
+          <!-- Tab 6 END -->
+
         </div>
 
-        <!-- Tabs Standalone End -->
+        <!-- Tabs Standalone END -->
 
       </div>
     </div>
@@ -1965,6 +2203,7 @@
 </div>
 
 <!-- TABS BLOCK END -->
+
 
 
 <!-- INFOLEFT BLOCK START -->
