@@ -1,10 +1,10 @@
 <style>
   /* ----------------------------------------------- */
-  /* ------------ MASTER TEMPLATE v1.02 ------------ */
+  /* ------------ MASTER TEMPLATE v1.03 ------------ */
   /* ----------------------------------------------- */
-  /* 1. Added 480w responsive to Form terms and submit button. 
-     2. Reduced Form Shadow intensity...plus various form style tweaks.
-     3. TO UPDATE: Replace Brand and Core styles. Replace Form Footer HTML.
+  /* 1. Added Tabs block 
+     2. Added Video Modal
+     3. TO UPDATE: Replace Brand and Core styles. Add in new HTML.
   */
 
   /* ------- RECOMMENDED TEMPLATE USE ------- */
@@ -50,6 +50,12 @@
 
 
   /* ------- CALVERT HEADER/FOOTER - ON PAGE OVERRIDES ------- */
+
+
+  .modal-content {
+    top: 140px;
+    /* Change 140px to inherit if no CMS Header */
+  }
 
   #mainContent {
     position: relative;
@@ -1684,7 +1690,7 @@
 
         <!-- <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a> -->
 
-        <div class="phone-container" style="margin-right: 1%;"><a href="tel:+18000000000"
+        <div class="phone-container" style="margin-right: 1%;"><a style="border: none;" href="tel:+18000000000"
             class="button button-lg text-normal text-white transparent-light-bkg"><span
               class="hide-mobile">Questions?</span>
             <span class="mr-sm text-nowrap hide-mobile"><i
