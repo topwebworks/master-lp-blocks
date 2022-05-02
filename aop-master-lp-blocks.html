@@ -64,6 +64,11 @@
     /* Change from 140px to 0 if no CMS Header */
   }
 
+  .modal-content {
+    top: 140px;
+    /* Change 140px to inherit if no CMS Header */
+  }
+
   #cmsPageContents {
     position: relative;
     z-index: 0;
@@ -1253,12 +1258,6 @@
     border-radius: 5px;
   }
 
-
-
-
-
-
-
   .tab-label1 {
     background-color: #e9edff;
     border: 1px solid #7686c5;
@@ -1395,6 +1394,92 @@
   } */
 
 
+
+  /* ------- MODAL WINDOW ------- */
+
+  /* The Modal background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  @-webkit-keyframes modal-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes modal-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Modal Content Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 18px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    -webkit-animation-name: modal-animation;
+    -webkit-animation-duration: 0.5s;
+    animation-name: modal-animation;
+    animation-duration: 0.5s;
+  }
+
+  .modal-content .iframe-container {
+    position: relative;
+    padding-bottom: calc(9/16*100%);
+  }
+
+  .modal-content .iframe-sizing {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* The Close Button */
+  .modal-content .close {
+    position: absolute;
+    top: -9px;
+    right: 3px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
   /* ------- RESPONSIVE ------- */
 
   @media screen and (max-width: 768px) {
@@ -1497,6 +1582,13 @@
 
 
   @media screen and (max-width: 480px) {
+
+    .modal-content {
+      margin: 5% auto;
+      padding: 0;
+      border-radius: 0;
+      width: 100%;
+    }
 
     .master-tab-wrap .tab+label {
       height: 60px;
@@ -1604,8 +1696,13 @@
 
   @media screen and (max-width: 768px) {
 
-    .some-element-selector {
-      width: 80%;
+    .hero-block-video-background,
+    .hide-mobile {
+      display: none;
+    }
+
+    .hero-block-container {
+      background-image: url();
     }
 
   }
@@ -1645,7 +1742,15 @@
               src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/logo.png" alt="" title="Home" /></a>
         </div>
 
-        <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a>
+        <!-- <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a> -->
+
+        <div class="phone-container" style="margin-right: 1%;"><a href="tel:+18000000000"
+            class="button button-lg text-normal text-white transparent-light-bkg"><span
+              class="hide-mobile">Questions?</span>
+            <span class="mr-sm text-nowrap hide-mobile"><i
+                class="fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+          </a>
+        </div>
 
       </div>
 
@@ -1665,15 +1770,13 @@
 
             <div class="buttonset-container">
               <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
-                  Ipsum
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <span><i></i></span>
                 </a>
               </div>
-              <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-white border-white transparent-light-bkg">Lorem
-                  Ipsum
-                  <span><i></i></span>
+              <div class="button-container"><a id="modalBtn" href="#" target=""
+                  class="button button-lg button-text text-white border-white transparent-light-bkg">Watch Video
+                  <span><i class="fa-solid fa-video"></i></span>
                 </a>
               </div>
             </div>
@@ -2471,3 +2574,19 @@
 </div>
 
 <!-- INFOBAR BLOCK END -->
+
+
+<!-- THE MODAL -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content shadow-lg">
+    <div class="iframe-container">
+      <iframe class="iframe-sizing" src="https://www.youtube.com/embed/hgk4WfXMTqA?rel=0&showinfo=0" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""></iframe>
+    </div>
+    <span class="close">&times;</span>
+  </div>
+</div>
+<script src="https://glnmedia.s3.amazonaws.com/landing/master-template/js/modal.js"></script>
