@@ -3,8 +3,9 @@
   /* ------------ MASTER TEMPLATE v1.03 ------------ */
   /* ----------------------------------------------- */
   /* 1. Added Tabs block 
-     2. Added Video Modal
-     3. TO UPDATE: Replace Brand and Core styles. Add in new HTML.
+     2. Added Video modal
+     3. Added Fixed button
+     TO UPDATE: Replace Brand and Core styles. Add in new HTML.
   */
 
 
@@ -1426,6 +1427,27 @@
   }
 
 
+  /* ------- FIXED BUTTON ------- */
+
+  #btn2 {
+    position: fixed;
+    bottom: 10vh;
+    right: -231px;
+    z-index: 5000;
+    transition: transform ease-in-out 0.3s;
+  }
+
+  #btn2.visible {
+    transform: translateX(-220px);
+    opacity: 0.6;
+  }
+
+  #btn2.visible:hover,
+  #btn2.visible:hover a {
+    opacity: 1;
+  }
+
+
 
   /* ------- RESPONSIVE ------- */
 
@@ -1640,6 +1662,13 @@
     margin: 0 auto 40px;
     /* Temporary style override for default layout */
   }
+
+  #btn2 a {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    /* If using fixed button */
+  }
+
 
   @media screen and (max-width: 768px) {
 
@@ -1859,7 +1888,7 @@
 
 <!-- BENEFITS BLOCK START -->
 
-<div class="benefits-block-container">
+<div id="btn1" class="benefits-block-container">
   <div class="benefits-block-overlay">
     <div class="benefits-block-wrapper">
 
@@ -2523,6 +2552,19 @@
 </div>
 
 <!-- INFOBAR BLOCK END -->
+
+
+
+<!-- FIXED BUTTON START -->
+
+<div id="btn2" class="button-container"><a href="tel:+18000000000" target=""
+    class="button button-lg button-text text-white border-primary primary-bkg"><i
+      class="mr-sm fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+  </a>
+</div>
+<script src="https://glnmedia.s3.amazonaws.com/landing/master-template/js/fixedButton.js"></script>
+
+<!-- FIXED BUTTON END -->
 
 
 
