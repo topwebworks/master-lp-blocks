@@ -1032,6 +1032,394 @@
   }
 
 
+  /* ------- TABS BLOCK ------- */
+
+  .tabs-block-container {
+    background-image: url("");
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    min-height: inherit;
+    height: auto;
+  }
+
+  .tabs-block-overlay {
+    width: 100%;
+    margin: 0;
+    background-color: var(--white);
+    display: flex;
+  }
+
+  .tabs-block-wrapper {
+    width: 100%;
+    max-width: 1220px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .tabs-block-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .master-tab-wrap .tab-content-right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+  }
+
+  .master-tab-wrap .tab-content-left-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 60%;
+    height: 100%;
+    padding-right: 4%;
+  }
+
+  .master-tab-wrap {
+    -webkit-transition: 0.3s box-shadow ease;
+    transition: 0.3s box-shadow ease;
+    border-radius: 6px;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    list-style: none;
+    background-color: var(--white);
+    margin: 40px 0 20px;
+  }
+
+  .master-tab-wrap .tab {
+    display: none;
+  }
+
+  .master-tab-wrap .tab:checked+label+.tab-content {
+    opacity: 1;
+    -webkit-transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+  }
+
+  .master-tab-wrap .tab:checked+label {
+    background-color: var(--white);
+    box-shadow: 0 -1px 0 var(--white) inset;
+    cursor: default;
+    /* border: 1px solid var(--primary); */
+    color: var(--gray-900);
+    border-width: 2px;
+  }
+
+  .master-tab-wrap .tab:checked+label:hover {
+    box-shadow: 0 -1px 0 var(--white) inset;
+    background-color: var(--white);
+  }
+
+  .master-tab-wrap .tab+label {
+    width: 14%;
+    /* Change width % to fit number of tabs */
+    color: var(--gray-500);
+    box-shadow: 0 -1px 0 #eee inset;
+    border-radius: 6px 6px 0 0;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    -webkit-transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease;
+    height: 120px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 1%;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.07);
+  }
+
+  .master-tab-wrap .tab+label span {
+    letter-spacing: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: var(--font-family);
+  }
+
+  .master-tab-wrap .tab+label:hover {
+    background-color: #ffffff;
+    box-shadow: 0 1px 0 #f4f4f4 inset;
+    color: var(--gray-900);
+  }
+
+  .master-tab-wrap .tab-content {
+    padding: 1%;
+    background-color: transparent;
+    position: absolute;
+    width: 99%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    /* -webkit-transform: translateY(-3px);
+    transform: translateY(-3px); */
+    /* border-radius: 5px; */
+    order: 99;
+  }
+
+  .master-tab-wrap .tab-content-wrapper {
+    border-radius: 5px;
+    border: 1px solid #dddcdc;
+    padding: 30px 3%;
+    margin: 15px auto;
+    width: 97%;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
+
+  .master-tab-wrap .tab-content-right-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .master-tab-wrap .tab-content-image-1 {
+    background-image: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bkg-img-medium.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .master-tab-wrap .inset-image {
+    display: flex;
+    width: 100%;
+    height: 450px;
+    border-radius: 5px;
+  }
+
+  .tab-label1 {
+    background-color: #e9edff;
+    border: 1px solid #7686c5;
+  }
+
+  .tab-label1:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 43px;
+    height: auto;
+    margin: 0;
+  }
+
+  .tab-label2 {
+    background-color: #f5ffe7;
+    border: 1px solid #8dc740;
+  }
+
+  .tab-label2:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/history-geography.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 40px;
+    height: auto;
+    margin: 0;
+  }
+
+  .tab-label3 {
+    background-color: #fff4e3;
+    border: 1px solid #fcb13b;
+  }
+
+  .tab-label3:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/language-arts.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 36px;
+    height: auto;
+    margin: 0;
+  }
+
+  .tab-label4 {
+    background-color: #ffe4e4;
+    border: 1px solid #f37c7c;
+  }
+
+  .tab-label4:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/mathematics.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 35px;
+    height: auto;
+    margin: 0;
+  }
+
+  .tab-label5 {
+    background-color: #ddfaff;
+    border: 1px solid #2ab5cd;
+  }
+
+  .tab-label5:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/science.svg");
+    display: block;
+    width: 100%;
+    max-width: 64px;
+    min-width: 40px;
+    height: auto;
+    margin: 0;
+  }
+
+  .tab-label6 {
+    background-color: #e9edff;
+    border: 1px solid #7686c5;
+  }
+
+  .tab-label6:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/electives.svg");
+    filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%);
+    display: block;
+    width: 100%;
+    max-width: 60px;
+    min-width: 35px;
+    height: auto;
+    margin: 0;
+  }
+
+  /* --- Saved --- */
+
+  /* .master-tab-wrap .tab:first-of-type:not(:last-of-type)+label {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .master-tab-wrap .tab:not(:first-of-type):not(:last-of-type)+label {
+    border-radius: 0;
+  }
+
+  .master-tab-wrap .tab:last-of-type:not(:first-of-type)+label {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  } */
+
+  /* .master-tab-wrap:hover {
+    box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
+  } */
+
+
+
+  /* ------- MODAL WINDOW ------- */
+
+  /* The Modal background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  @-webkit-keyframes modal-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes modal-animation {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Modal Content Box */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 18px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 900px;
+    -webkit-animation-name: modal-animation;
+    -webkit-animation-duration: 0.5s;
+    animation-name: modal-animation;
+    animation-duration: 0.5s;
+  }
+
+  .modal-content .iframe-container {
+    position: relative;
+    padding-bottom: calc(9/16*100%);
+  }
+
+  .modal-content .iframe-sizing {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* The Close Button */
+  .modal-content .close {
+    position: absolute;
+    top: -9px;
+    right: 3px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .modal-content .close:hover,
+  .modal-content .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
   /* ------- RESPONSIVE ------- */
 
   @media screen and (max-width: 768px) {
@@ -1041,9 +1429,29 @@
       margin-top: 69px;
     }
 
+    .master-tab-wrap .tab-content-wrapper {
+      /* border-radius: 5px; */
+      flex-direction: column;
+    }
+
+    .master-tab-wrap .tab-content-left-container {
+      width: 100%;
+      padding: 10px auto;
+    }
+
+    .master-tab-wrap .tab-content-right-container {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    .master-tab-wrap .tab+label {
+      height: 90px;
+    }
+
     .hero-block-video-foreground,
     .hero-block-video-background iframe,
-    .hero-block-video-background {
+    .hero-block-video-background,
+    .master-tab-wrap .tab+label span {
       display: none;
     }
 
@@ -1109,10 +1517,22 @@
       justify-content: center;
     }
 
+
   }
 
 
   @media screen and (max-width: 480px) {
+
+    .modal-content {
+      margin: 5% auto;
+      padding: 0;
+      border-radius: 0;
+      width: 100%;
+    }
+
+    .master-tab-wrap .tab+label {
+      height: 60px;
+    }
 
     .phone-container {
       justify-content: center;
@@ -1209,15 +1629,20 @@
     /* Temporary style override for default layout */
   }
 
-  .inforight-block-wrapper {
+  .infoleft-block-wrapper {
     margin: 0 auto 40px;
     /* Temporary style override for default layout */
   }
 
   @media screen and (max-width: 768px) {
 
-    .some-element-selector {
-      width: 80%;
+    .hero-block-video-background,
+    .hide-mobile {
+      display: none;
+    }
+
+    .hero-block-container {
+      background-image: url();
     }
 
   }
@@ -1257,7 +1682,15 @@
               src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/logo.png" alt="" title="Home" /></a>
         </div>
 
-        <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a>
+        <!-- <a href="#" target="" class="hero-block-nav-link button-text text-white text-link">Link</a> -->
+
+        <div class="phone-container" style="margin-right: 1%;"><a href="tel:+18000000000"
+            class="button button-lg text-normal text-white transparent-light-bkg"><span
+              class="hide-mobile">Questions?</span>
+            <span class="mr-sm text-nowrap hide-mobile"><i
+                class="fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+          </a>
+        </div>
 
       </div>
 
@@ -1277,15 +1710,13 @@
 
             <div class="buttonset-container">
               <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
-                  Ipsum
-                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                  class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <span><i></i></span>
                 </a>
               </div>
-              <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-white border-white transparent-light-bkg">Lorem
-                  Ipsum
-                  <span><i></i></span>
+              <div class="button-container"><a id="modalBtn" href="#" target=""
+                  class="button button-lg button-text text-white border-white transparent-light-bkg">Watch Video
+                  <span><i class="fa-solid fa-video"></i></span>
                 </a>
               </div>
             </div>
@@ -1529,78 +1960,292 @@
 
 
 
-<!-- INFOLEFT BLOCK START -->
+<!-- TABS BLOCK START -->
 
-<div class="infoleft-block-container">
-  <div class="infoleft-block-overlay">
-    <div class="infoleft-block-wrapper">
+<div class="tabs-block-container">
+  <div class="tabs-block-overlay">
+    <div class="tabs-block-wrapper">
 
-      <div class="infoleft-block-content-wrapper">
+      <div class="tabs-block-content">
 
-        <div class="infoleft-block-left-container">
+        <!-- Tabs Standalone START -->
 
-          <div class="infoleft-block-content">
+        <div class="master-tab-wrap">
 
-            <div class="eyebrow text-gray mb-sm">Interdum pharetra</div>
+          <!-- Tab 1 START -->
 
-            <div class="title-md text-darkgray">Elementum semper aliquet in&nbsp;non.</div>
+          <!-- active tab on page load gets "checked" attribute -->
+          <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
+          <label class="tab-label1" for="tab1"><span>Bible</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
 
-            <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-              purus
-              mauris sagittis aliquam. Sit imperdiet sit lacinia convallis est. Neque, et tempus ut ultricies at quisque
-              sed viverra et. Amet tortor dictum tristique augue purus arcu, sit&nbsp;fringilla.
-            </div>
-
-            <div class="buttonset-container">
-              <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
-                  Ipsum
-                  <span><i class="fa-solid fa-arrow-up"></i></span>
-                </a>
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Bible</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="button-container"><a href="#" target=""
-                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
-                  Ipsum
-                  <span><i></i></span>
-                </a>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
               </div>
+
             </div>
-
-            <hr class="hr-light" />
-
-            <div class="text-sm text-gray mb-lg">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum
-              ut quis fringilla aliquam libero vivamus maecenas&nbsp;egestas.”
-              <span class="text-xs text-nowrap">
-                - Jane Smith - Somewhere, USA
-              </span>
-            </div>
-
-            <div class="phone-container"><a href="tel:+18000000000"
-                class="button button-lg text-normal text-darkgray border-darkgray transparent-dark-bkg">Questions?
-                <span class="mr-sm text-nowrap"><i
-                    class="fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
-              </a>
-            </div>
-
           </div>
+
+          <!-- Tab 1 END -->
+
+          <!-- Tab 2 START -->
+
+          <input type="radio" id="tab2" name="tabGroup1" class="tab">
+          <label class="tab-label2" for="tab2"><span>History & Geography</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">History & Geography</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 2 END -->
+
+          <!-- Tab 3 START -->
+
+          <input type="radio" id="tab3" name="tabGroup1" class="tab">
+          <label class="tab-label3" for="tab3"><span>Language Arts</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Language Arts</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 3 END -->
+
+          <!-- Tab 4 START -->
+
+          <input type="radio" id="tab4" name="tabGroup1" class="tab">
+          <label class="tab-label4" for="tab4"><span>Math</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Math</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 4 END -->
+
+          <!-- Tab 5 START -->
+
+          <input type="radio" id="tab5" name="tabGroup1" class="tab">
+          <label class="tab-label5" for="tab5"><span>Science</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+
+              <div class="tab-content-left-container">
+                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="title-md">Science</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 5 END -->
+
+          <!-- Tab 6 START -->
+
+          <input type="radio" id="tab6" name="tabGroup1" class="tab">
+          <label class="tab-label6" for="tab6"><span>Electives</span></label>
+          <div class="tab-content">
+            <div class="tab-content-wrapper">
+
+              <div class="tab-content-left-container">
+                <div class="title-md">Electives</div>
+                <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nam tempor eros at imperdiet condimentum. Integer venenatis consectetur est, vitae ullamcorper erat
+                  dignissim vitae. Maecenas in commodo lorem. Nulla nibh lectus, efficitur eu lacus sit amet, volutpat
+                  luctus turpis. Proin sodales eleifend purus, in condimentum arcu sagittis quis. Vivamus rutrum purus
+                  erat, eget condimentum est mollis ut. Suspendisse potenti.</div>
+                <div class="buttonset-container">
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                  <div class="button-container"><a href="#" target=""
+                      class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
+                      <span><i></i></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-content-right-container">
+                <div class="tab-content-right-content">
+                  <div>
+                    <img
+                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      style="width: 100%; height: auto;" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Tab 6 END -->
 
         </div>
 
-        <div class="infoleft-block-right-container">
-
-          <div class="infoleft-block-right-content">
-            <div class="infoleft-block-image-1 inset-image shadow-lg"></div>
-          </div>
-
-        </div>
+        <!-- Tabs Standalone END -->
 
       </div>
-
     </div>
   </div>
 </div>
 
-<!-- INFOLEFT BLOCK END -->
+<!-- TABS BLOCK END -->
 
 
 
@@ -1709,6 +2354,82 @@
 <!-- INFORIGHT BLOCK END -->
 
 
+
+<!-- INFOLEFT BLOCK START -->
+
+<div class="infoleft-block-container">
+  <div class="infoleft-block-overlay">
+    <div class="infoleft-block-wrapper">
+
+      <div class="infoleft-block-content-wrapper">
+
+        <div class="infoleft-block-left-container">
+
+          <div class="infoleft-block-content">
+
+            <div class="eyebrow text-gray mb-sm">Interdum pharetra</div>
+
+            <div class="title-md text-darkgray">Elementum semper aliquet in&nbsp;non.</div>
+
+            <div class="text-normal text-darkgray mb-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+              purus
+              mauris sagittis aliquam. Sit imperdiet sit lacinia convallis est. Neque, et tempus ut ultricies at quisque
+              sed viverra et. Amet tortor dictum tristique augue purus arcu, sit&nbsp;fringilla.
+            </div>
+
+            <div class="buttonset-container">
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-white border-primary primary-bkg">Lorem
+                  Ipsum
+                  <span><i class="fa-solid fa-arrow-up"></i></span>
+                </a>
+              </div>
+              <div class="button-container"><a href="#" target=""
+                  class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Lorem
+                  Ipsum
+                  <span><i></i></span>
+                </a>
+              </div>
+            </div>
+
+            <hr class="hr-light" />
+
+            <div class="text-sm text-gray mb-lg">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam elementum
+              ut quis fringilla aliquam libero vivamus maecenas&nbsp;egestas.”
+              <span class="text-xs text-nowrap">
+                - Jane Smith - Somewhere, USA
+              </span>
+            </div>
+
+            <div class="phone-container"><a href="tel:+18000000000"
+                class="button button-lg text-normal text-darkgray border-darkgray transparent-dark-bkg">Questions?
+                <span class="mr-sm text-nowrap"><i
+                    class="fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="infoleft-block-right-container">
+
+          <div class="infoleft-block-right-content">
+            <div class="infoleft-block-image-1 inset-image shadow-lg"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- INFOLEFT BLOCK END -->
+
+
+
 <!-- CTA BLOCK START -->
 
 <div class="cta-block-container">
@@ -1762,6 +2483,7 @@
 <!-- CTA BLOCK END -->
 
 
+
 <!-- INFOBAR BLOCK START -->
 
 <div class="infobar-block-container">
@@ -1794,3 +2516,23 @@
 </div>
 
 <!-- INFOBAR BLOCK END -->
+
+
+
+<!-- THE MODAL - Should be the last block -->
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content shadow-lg">
+    <div class="iframe-container">
+      <iframe class="iframe-sizing" src="https://www.youtube.com/embed/hgk4WfXMTqA?rel=0&showinfo=0" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen=""></iframe>
+    </div>
+    <span class="close">&times;</span>
+  </div>
+</div>
+<script src="https://glnmedia.s3.amazonaws.com/landing/master-template/js/modal.js"></script>
+
+<!-- THE MODAL END - Should be the last block -->
