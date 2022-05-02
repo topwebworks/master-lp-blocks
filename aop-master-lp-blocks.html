@@ -1117,7 +1117,6 @@
   .master-tab-wrap .tab-content-left-container {
     display: flex;
     flex-direction: column;
-
     width: 60%;
     height: 100%;
     padding-right: 4%;
@@ -1159,12 +1158,12 @@
   }
 
   .master-tab-wrap .tab:checked+label {
-    background-color: var(--white);
     box-shadow: 0 -1px 0 var(--white) inset;
     cursor: default;
     /* border: 1px solid var(--primary); */
     color: var(--gray-900);
     border-width: 2px;
+    opacity: 1;
   }
 
   .master-tab-wrap .tab:checked+label:hover {
@@ -1175,6 +1174,7 @@
   .master-tab-wrap .tab+label {
     width: 14%;
     /* Change width % to fit number of tabs */
+    background-color: var(--white);
     color: var(--gray-500);
     box-shadow: 0 -1px 0 #eee inset;
     border-radius: 6px 6px 0 0;
@@ -1197,7 +1197,8 @@
     justify-content: space-evenly;
     margin: 0 1%;
     border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07), 0 1px 2px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.07);
+    opacity: 0.8;
   }
 
   .master-tab-wrap .tab+label span {
@@ -1212,6 +1213,7 @@
     background-color: #ffffff;
     box-shadow: 0 1px 0 #f4f4f4 inset;
     color: var(--gray-900);
+    opacity: 1;
   }
 
   .master-tab-wrap .tab-content {
@@ -1260,8 +1262,11 @@
   }
 
   .tab-label1 {
-    background-color: #e9edff;
     border: 1px solid #7686c5;
+  }
+
+  .master-tab-wrap #tab1:checked+.tab-label1 {
+    background-color: #e9edff;
   }
 
   .tab-label1:before {
@@ -1275,8 +1280,11 @@
   }
 
   .tab-label2 {
-    background-color: #f5ffe7;
     border: 1px solid #8dc740;
+  }
+
+  .master-tab-wrap #tab2:checked+.tab-label2 {
+    background-color: #f5ffe7;
   }
 
   .tab-label2:before {
@@ -1290,8 +1298,11 @@
   }
 
   .tab-label3 {
-    background-color: #fff4e3;
     border: 1px solid #fcb13b;
+  }
+
+  .master-tab-wrap #tab3:checked+.tab-label3 {
+    background-color: #fff4e3;
   }
 
   .tab-label3:before {
@@ -1305,8 +1316,11 @@
   }
 
   .tab-label4 {
-    background-color: #ffe4e4;
     border: 1px solid #f37c7c;
+  }
+
+  .master-tab-wrap #tab4:checked+.tab-label4 {
+    background-color: #ffe4e4;
   }
 
   .tab-label4:before {
@@ -1320,8 +1334,11 @@
   }
 
   .tab-label5 {
-    background-color: #ddfaff;
     border: 1px solid #2ab5cd;
+  }
+
+  .master-tab-wrap #tab5:checked+.tab-label5 {
+    background-color: #ddfaff;
   }
 
   .tab-label5:before {
@@ -1335,8 +1352,11 @@
   }
 
   .tab-label6 {
-    background-color: #e9edff;
     border: 1px solid #7686c5;
+  }
+
+  .master-tab-wrap #tab6:checked+.tab-label6 {
+    background-color: #e9edff;
   }
 
   .tab-label6:before {
@@ -1369,7 +1389,6 @@
   /* .master-tab-wrap:hover {
     box-shadow: 0 12px 23px rgba(0, 0, 0, 0.23), 0 10px 10px rgba(0, 0, 0, 0.19);
   } */
-
 
 
   /* ------- MODAL WINDOW ------- */
@@ -2581,7 +2600,7 @@
 
 <div id="btn2" class="button-container"><a href="tel:+18000000000" target=""
     class="button button-lg button-text text-white border-primary primary-bkg"><i
-      class="mr-sm fa-solid fa-phone-volume"></i></span><strong>800.000.0000</strong>
+      class="mr-sm fa-solid fa-phone-volume"></i><strong>800.000.0000</strong>
   </a>
 </div>
 <script src="https://glnmedia.s3.amazonaws.com/landing/master-template/js/fixedButton.js"></script>
