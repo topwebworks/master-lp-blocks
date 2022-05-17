@@ -47,6 +47,18 @@
     --gray-300: #D1D5DB;
     --gray-500: #6B7280;
     --gray-900: #111827;
+    --purple: #7686c5;
+    --purplelight: #e9edff;
+    --green: #5ca446;
+    --greenlight: #f4fde6;
+    --yellow: #fcb13b;
+    --yellowlight: #fff4e3;
+    --red: #d52357;
+    --redlight: #fdebf0;
+    --blue: #007abc;
+    --bluelight: #e8f7ff;
+    --teal: #3F8F8F;
+    --teallight: #e6ffff;
 
   }
 
@@ -1225,6 +1237,14 @@
     background-size: cover;
   }
 
+  .master-tab-wrap .tab-content-product-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
   .master-tab-wrap .inset-image {
     display: flex;
     width: 100%;
@@ -1234,15 +1254,16 @@
 
   .tab-label1,
   .content-border1 {
-    border: 1px solid #7686c5;
+    border: 1px solid var(--purple);
   }
 
   .master-tab-wrap #tab1:checked+.tab-label1 {
-    background-color: #e9edff;
+    background-color: var(--purplelight);
   }
 
   .tab-label1:before {
-    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg");
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/book.svg");
+    /* content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg"); */
     display: block;
     width: 100%;
     max-width: 64px;
@@ -1253,11 +1274,11 @@
 
   .tab-label2,
   .content-border2 {
-    border: 1px solid #8dc740;
+    border: 1px solid var(--green);
   }
 
   .master-tab-wrap #tab2:checked+.tab-label2 {
-    background-color: #f5ffe7;
+    background-color: var(--greenlight);
   }
 
   .tab-label2:before {
@@ -1272,11 +1293,11 @@
 
   .tab-label3,
   .content-border3 {
-    border: 1px solid #fcb13b;
+    border: 1px solid var(--yellow);
   }
 
   .master-tab-wrap #tab3:checked+.tab-label3 {
-    background-color: #fff4e3;
+    background-color: var(--yellowlight);
   }
 
   .tab-label3:before {
@@ -1291,11 +1312,11 @@
 
   .tab-label4,
   .content-border4 {
-    border: 1px solid #f37c7c;
+    border: 1px solid var(--red);
   }
 
   .master-tab-wrap #tab4:checked+.tab-label4 {
-    background-color: #ffe4e4;
+    background-color: var(--redlight);
   }
 
   .tab-label4:before {
@@ -1310,11 +1331,11 @@
 
   .tab-label5,
   .content-border5 {
-    border: 1px solid #2ab5cd;
+    border: 1px solid var(--blue);
   }
 
   .master-tab-wrap #tab5:checked+.tab-label5 {
-    background-color: #ddfaff;
+    background-color: var(--bluelight);
   }
 
   .tab-label5:before {
@@ -1329,16 +1350,17 @@
 
   .tab-label6,
   .content-border6 {
-    border: 1px solid #7686c5;
+    border: 1px solid var(--teal);
   }
 
   .master-tab-wrap #tab6:checked+.tab-label6 {
-    background-color: #e9edff;
+    background-color: var(--teallight);
   }
 
   .tab-label6:before {
     content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/electives.svg");
-    filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%);
+    /* filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%); */
+    filter: brightness(0) saturate(100%) invert(54%) sepia(15%) saturate(1420%) hue-rotate(131deg) brightness(88%) contrast(83%);
     display: block;
     width: 100%;
     max-width: 60px;
@@ -2037,37 +2059,37 @@
 
           <!-- active tab on page load gets "checked" attribute -->
           <input type="radio" id="tab1" name="tabGroup1" class="tab" checked>
-          <label class="tab-label1" for="tab1"><span>Bible</span></label>
+          <label class="tab-label1" for="tab1"><span>K-2 Courses</span></label>
           <div class="tab-content">
             <div class="tab-content-wrapper content-border1">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Bible</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Bible is an in-depth study of the Old and New
-                  Testaments. Utilizing the King James Version, the Bible curriculum assists in the development of
-                  practical Christian living. The LIFEPAC Bible worktext curriculum covers the themes of theology, the
-                  attributes of God, biblical literature, biblical geography, Christian growth, and Christian evidences,
-                  as well as a special emphasis for each grade&nbsp;level.</div>
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-book-open"></i>Print Grades K-2</div>
+                <div class="title-md">Kid-Friendly Courses</div>
+                <div class="text-normal text-darkgray mb-md">Calvert print courses from kindergarten through 2nd grade
+                  provide eye-catching lessons for young learners. This print-based curriculum for grades K-2 includes
+                  four general subjects that combine textbook and workbook lessons into "worktext" units. Promoting
+                  critical thinking skills and independent study, Calvert K-2 conveniently coordinates lessons,
+                  manipulatives, exercises, projects, reviews, and tests to help students master&nbsp;concepts.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://www.calverthomeschool.com/shop" target="shopping"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+                  </a>
+                </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
+                  <div class="tab-content-product-image-container">
                     <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      src="https://glnmedia.s3.amazonaws.com/Calvert/landing-pages/homeschool-beginner-guide/img_k2_products.png"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
@@ -2086,32 +2108,31 @@
             <div class="tab-content-wrapper content-border2">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-desktop"></i>Online Grades 3-12</div>
                 <div class="title-md">History & Geography</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC History & Geography develops students'
-                  understanding of and appreciation for God's activity as seen in the record of man and his
-                  relationships. The LIFEPAC History & Geography worktext-based curriculum targets this goal by focusing
-                  on six major themes: Geography (World and American), History (World, American, and Religious),
-                  Government, Citizenship, Economics, and Social&nbsp;Sciences.</div>
+                <div class="text-normal text-darkgray mb-md">Calvert History & Geography offers students in grades 3-12
+                  a comprehensive look at the past and the world around them today. The online courses in this
+                  discipline provide a wide range of categories including citizenship, economics, and social studies.
+                  Special topics like career preparation and finance management also are&nbsp;included.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://commerce.calverthomeschool.com/catalog"
+                      target="shopping" class="button button-lg button-text text-white border-primary primary-bkg">Shop
+                      Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+                </a>
+              </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
-                    <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                  <div class="tab-content-product-image-container">
+                    <img src="https://glnmedia.s3.amazonaws.com/landing/calvert/landing/product/history-laptop.svg"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
@@ -2130,31 +2151,33 @@
             <div class="tab-content-wrapper content-border3">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-desktop"></i>Online Grades 3-12</div>
                 <div class="title-md">Language Arts</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Language Arts covers the six major content strands
-                  of reading, speaking and listening, writing, spelling, grammar, and composition for grades K–12. This
-                  program also covers special topics like visual media, the history of the English language, the Bible
-                  as literature, and book reports, as well as study and research&nbsp;skills.</div>
+                <div class="text-normal text-darkgray mb-md">Calvert Language Arts covers the six major content areas of
+                  reading, speaking and listening, writing, spelling, grammar, and composition. Elementary grades study
+                  English skills through an incorporated presentation, while middle and high school grades focus on
+                  skill development unit by unit. This program promotes literacy in all areas of communication and
+                  supports lifelong communication skills, including reading comprehension and&nbsp;vocabulary.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://commerce.calverthomeschool.com/catalog"
+                      target="shopping" class="button button-lg button-text text-white border-primary primary-bkg">Shop
+                      Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+              </a>
+            </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
+                  <div class="tab-content-product-image-container">
                     <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                      src="https://glnmedia.s3.amazonaws.com/landing/calvert/landing/product/language-arts-laptop.svg"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
@@ -2173,32 +2196,32 @@
             <div class="tab-content-wrapper content-border4">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Math</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Math develops and builds math skills through the
-                  use of various question formats, multiple exercise techniques, and fun learning games. This motivating
-                  math curriculum prepares students for using math successfully in real-life situations. The curriculum
-                  targets this goal by focusing on the major themes of number skills, geometry, algebra, data analysis,
-                  and&nbsp;probability.</div>
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-desktop"></i>Online Grades 3-12</div>
+                <div class="title-md">Mathematics</div>
+                <div class="text-normal text-darkgray mb-md">Calvert Math is a homeschool curriculum that trains
+                  students in grades 3-12 to successfully use math in real-life situations. At all grade levels, this
+                  program focuses on number skills, geometry, algebra, data analysis, and probability. Calvert Math uses
+                  mastery learning techniques to build upon previously taught concepts and promote independent
+                  cognitive&nbsp;reasoning.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://commerce.calverthomeschool.com/catalog"
+                      target="shopping" class="button button-lg button-text text-white border-primary primary-bkg">Shop
+                      Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+            </a>
+          </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
-                    <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                  <div class="tab-content-product-image-container">
+                    <img src="https://glnmedia.s3.amazonaws.com/landing/calvert/landing/product/math-laptop.svg"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
@@ -2217,32 +2240,31 @@
             <div class="tab-content-wrapper content-border5">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-desktop"></i>Online Grades 3-12</div>
                 <div class="title-md">Science</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Science focuses on the development of observational
-                  skills as they study the physical universe God created. The four major strands of this curriculum
-                  include Life Science (plants and animals, human anatomy and personal care, biology), Space and Earth
-                  Science (geology, weather, space), Physical Science (chemistry, physics), and the nature of science
-                  (scientific method, experimentation, technology).</div>
+                <div class="text-normal text-darkgray mb-md">Calvert Science develops observation skills of the physical
+                  universe. As students advance from science basics to more complex topics, they study a wide range of
+                  disciplines, including biology, chemistry, life science, space, physical science, and&nbsp;nature.
+                </div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://commerce.calverthomeschool.com/catalog"
+                      target="shopping" class="button button-lg button-text text-white border-primary primary-bkg">Shop
+                      Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+          </a>
+        </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
-                    <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                  <div class="tab-content-product-image-container">
+                    <img src="https://glnmedia.s3.amazonaws.com/landing/calvert/landing/product/science-laptop.svg"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
@@ -2261,31 +2283,32 @@
             <div class="tab-content-wrapper content-border6">
 
               <div class="tab-content-left-container">
+                <div class="eyebrow text-gray"><i class="mr-sm fa-solid fa-desktop"></i>Online Grades 5-12</div>
                 <div class="title-md">Electives</div>
-                <div class="text-normal text-darkgray mb-md">Broaden your child's knowledge base and boost your child's
-                  confidence with LIFEPAC's electives. Choose from Accounting, American Literature, Art, British
-                  Literature, Civics, Consumer Math, Family & Consumer Science, Foundations for Living: Studies in the
-                  Christian Worldview, Health Quest, High School Health, Spanish I and II, and Speech: Essentials of
-                  Communication, as well as LIFEPAC Select&nbsp;courses.</div>
+                <div class="text-normal text-darkgray mb-md">Calvert electives open up new worlds for your child to
+                  explore. With courses in foreign languages, future careers, computer programming, fitness and more,
+                  diverse electives provide for a well-rounded educational experience, while helping students pursue
+                  their passions. Plus, each course includes automatic grading and recordkeeping to make schooling at
+                  home possible for any&nbsp;family.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
-                      <span><i></i></span>
+                  <div class="button-container"><a href="https://commerce.calverthomeschool.com/catalog"
+                      target="shopping" class="button button-lg button-text text-white border-primary primary-bkg">Shop
+                      Now
+                      <!-- <span><i></i></span> -->
                     </a>
                   </div>
                   <!-- <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-darkgray border-darkgray transparent-dark-bkg">Samples
                       <span><i></i></span>
-                    </a>
-                  </div> -->
+        </a>
+      </div> -->
                 </div>
               </div>
 
               <div class="tab-content-right-container">
                 <div class="tab-content-right-content">
-                  <div>
-                    <img
-                      src="https://glnmedia.s3.amazonaws.com/landing/master-template/images/lifepac-3-5-full-grade-set-cropped.png"
+                  <div class="tab-content-product-image-container">
+                    <img src="https://glnmedia.s3.amazonaws.com/landing/calvert/landing/product/electives-laptop.svg"
                       style="width: 100%; height: auto;" />
                   </div>
                 </div>
