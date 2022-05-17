@@ -47,6 +47,18 @@
     --gray-300: #D1D5DB;
     --gray-500: #6B7280;
     --gray-900: #111827;
+    --purple: #7686c5;
+    --purplelight: #e9edff;
+    --green: #8dc740;
+    --greenlight: #f5ffe7;
+    --yellow: #fcb13b;
+    --yellowlight: #fff4e3;
+    --red: #f37c7c;
+    --redlight: #ffe4e4;
+    --blue: #2ab5cd;
+    --bluelight: #ddfaff;
+    --teal: #3F8F8F;
+    --teallight: #e6ffff;
 
   }
 
@@ -1254,6 +1266,14 @@
     background-size: cover;
   }
 
+  .master-tab-wrap .tab-content-product-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
   .master-tab-wrap .inset-image {
     display: flex;
     width: 100%;
@@ -1263,15 +1283,16 @@
 
   .tab-label1,
   .content-border1 {
-    border: 1px solid #7686c5;
+    border: 1px solid var(--purple);
   }
 
   .master-tab-wrap #tab1:checked+.tab-label1 {
-    background-color: #e9edff;
+    background-color: var(--purplelight);
   }
 
   .tab-label1:before {
-    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg");
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/book.svg");
+    /* content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg"); */
     display: block;
     width: 100%;
     max-width: 64px;
@@ -1282,11 +1303,11 @@
 
   .tab-label2,
   .content-border2 {
-    border: 1px solid #8dc740;
+    border: 1px solid var(--green);
   }
 
   .master-tab-wrap #tab2:checked+.tab-label2 {
-    background-color: #f5ffe7;
+    background-color: var(--greenlight);
   }
 
   .tab-label2:before {
@@ -1301,11 +1322,11 @@
 
   .tab-label3,
   .content-border3 {
-    border: 1px solid #fcb13b;
+    border: 1px solid var(--yellow);
   }
 
   .master-tab-wrap #tab3:checked+.tab-label3 {
-    background-color: #fff4e3;
+    background-color: var(--yellowlight);
   }
 
   .tab-label3:before {
@@ -1320,11 +1341,11 @@
 
   .tab-label4,
   .content-border4 {
-    border: 1px solid #f37c7c;
+    border: 1px solid var(--red);
   }
 
   .master-tab-wrap #tab4:checked+.tab-label4 {
-    background-color: #ffe4e4;
+    background-color: var(--redlight);
   }
 
   .tab-label4:before {
@@ -1339,11 +1360,11 @@
 
   .tab-label5,
   .content-border5 {
-    border: 1px solid #2ab5cd;
+    border: 1px solid var(--blue);
   }
 
   .master-tab-wrap #tab5:checked+.tab-label5 {
-    background-color: #ddfaff;
+    background-color: var(--bluelight);
   }
 
   .tab-label5:before {
@@ -1358,16 +1379,17 @@
 
   .tab-label6,
   .content-border6 {
-    border: 1px solid #7686c5;
+    border: 1px solid var(--teal);
   }
 
   .master-tab-wrap #tab6:checked+.tab-label6 {
-    background-color: #e9edff;
+    background-color: var(--teallight);
   }
 
   .tab-label6:before {
     content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/electives.svg");
-    filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%);
+    /* filter: invert(54%) sepia(11%) saturate(1656%) hue-rotate(190deg) brightness(96%) contrast(82%); */
+    filter: brightness(0) saturate(100%) invert(54%) sepia(15%) saturate(1420%) hue-rotate(131deg) brightness(88%) contrast(83%);
     display: block;
     width: 100%;
     max-width: 60px;
@@ -1706,6 +1728,10 @@
   /* ------------ YOUR OVERRIDE STYLES ------------ */
   /* -------------Just Changed Styles!------------- */
   /* ---------------------------------------------- */
+
+  .tab-label1:before {
+    content: url("https://glnmedia.s3.amazonaws.com/landing/master-template/images/bible.svg");
+  }
 
   .centered-block-wrapper {
     padding: 70px 10px 10px;
@@ -2064,16 +2090,15 @@
             <div class="tab-content-wrapper content-border1">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Bible</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Bible is an in-depth study of the Old and New
-                  Testaments. Utilizing the King James Version, the Bible curriculum assists in the development of
-                  practical Christian living. The LIFEPAC Bible worktext curriculum covers the themes of theology, the
-                  attributes of God, biblical literature, biblical geography, Christian growth, and Christian evidences,
-                  as well as a special emphasis for each grade&nbsp;level.</div>
+                <div class="eyebrow text-gray">Bible</div>
+                <div class="title-md">Teach your child practical Christian&nbsp;living.</div>
+                <div class="text-normal text-darkgray mb-md">Featuring the King James Version, LIFEPAC Bible is an
+                  in-depth study of the Old and New Testaments for grades 1-12, covering the themes of theology, the
+                  attributes of God, biblical literature, biblical geography, Christian growth, and
+                  Christian&nbsp;evidences.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <div class="button-container"><a href="https://www.aop.com/curriculum/shop-lifepac" target="_blank"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
                       <span><i></i></span>
                     </a>
                   </div>
@@ -2108,16 +2133,15 @@
             <div class="tab-content-wrapper content-border2">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">History & Geography</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC History & Geography develops students'
-                  understanding of and appreciation for God's activity as seen in the record of man and his
-                  relationships. The LIFEPAC History & Geography worktext-based curriculum targets this goal by focusing
-                  on six major themes: Geography (World and American), History (World, American, and Religious),
-                  Government, Citizenship, Economics, and Social&nbsp;Sciences.</div>
+                <div class="eyebrow text-gray">History & Geography</div>
+                <div class="title-md">Learn from the&nbsp;past.</div>
+                <div class="text-normal text-darkgray mb-md">Develop your student’s understanding of and appreciation
+                  for God’s activity as seen in the record of man and his relationships. This curriculum for grades 1-12
+                  focuses on the themes of geography, history, government, citizenship, economics, and
+                  social&nbsp;studies.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <div class="button-container"><a href="https://www.aop.com/curriculum/shop-lifepac" target="_blank"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
                       <span><i></i></span>
                     </a>
                   </div>
@@ -2152,15 +2176,15 @@
             <div class="tab-content-wrapper content-border3">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Language Arts</div>
+                <div class="eyebrow text-gray">Language Arts</div>
+                <div class="title-md">Embrace the gift of language and communication.</div>
                 <div class="text-normal text-darkgray mb-md">LIFEPAC Language Arts covers the six major content strands
-                  of reading, speaking and listening, writing, spelling, grammar, and composition for grades K–12. This
-                  program also covers special topics like visual media, the history of the English language, the Bible
-                  as literature, and book reports, as well as study and research&nbsp;skills.</div>
+                  of reading, speaking and listening, writing, spelling, grammar, and composition for grades K-12. This
+                  program also covers special topics like visual media and the Bible as literature, as well as study and
+                  research&nbsp;skills.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <div class="button-container"><a href="https://www.aop.com/curriculum/shop-lifepac" target="_blank"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
                       <span><i></i></span>
                     </a>
                   </div>
@@ -2195,16 +2219,14 @@
             <div class="tab-content-wrapper content-border4">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Math</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Math develops and builds math skills through the
-                  use of various question formats, multiple exercise techniques, and fun learning games. This motivating
-                  math curriculum prepares students for using math successfully in real-life situations. The curriculum
-                  targets this goal by focusing on the major themes of number skills, geometry, algebra, data analysis,
-                  and&nbsp;probability.</div>
+                <div class="eyebrow text-gray">Math</div>
+                <div class="title-md">Prepare students for using math in the real&nbsp;world.</div>
+                <div class="text-normal text-darkgray mb-md">LIFEPAC Math for grades K-12 prepares students for using
+                  math successfully in real-life situations. The curriculum targets this goal by focusing on the major
+                  themes of number skills, geometry, algebra, data analysis, and probability.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <div class="button-container"><a href="https://www.aop.com/curriculum/shop-lifepac" target="_blank"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
                       <span><i></i></span>
                     </a>
                   </div>
@@ -2239,16 +2261,14 @@
             <div class="tab-content-wrapper content-border5">
 
               <div class="tab-content-left-container">
-                <div class="eyebrow text-gray">Core Courses</div>
-                <div class="title-md">Science</div>
-                <div class="text-normal text-darkgray mb-md">LIFEPAC Science focuses on the development of observational
-                  skills as they study the physical universe God created. The four major strands of this curriculum
-                  include Life Science (plants and animals, human anatomy and personal care, biology), Space and Earth
-                  Science (geology, weather, space), Physical Science (chemistry, physics), and the nature of science
-                  (scientific method, experimentation, technology).</div>
+                <div class="eyebrow text-gray">Science</div>
+                <div class="title-md">Explore God's amazing creation.</div>
+                <div class="text-normal text-darkgray mb-md">LIFEPAC Science for grades 1-12 focuses on the development
+                  of observational skills as students study the physical universe God created. The four major strands
+                  include life science, space and Earth science, physical science, and the nature of&nbsp;science.</div>
                 <div class="buttonset-container">
-                  <div class="button-container"><a href="#" target=""
-                      class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
+                  <div class="button-container"><a href="https://www.aop.com/curriculum/shop-lifepac" target="_blank"
+                      class="button button-lg button-text text-white border-primary primary-bkg">Shop Now
                       <span><i></i></span>
                     </a>
                   </div>
@@ -2283,12 +2303,12 @@
             <div class="tab-content-wrapper content-border6">
 
               <div class="tab-content-left-container">
-                <div class="title-md">Electives</div>
-                <div class="text-normal text-darkgray mb-md">Broaden your child's knowledge base and boost your child's
-                  confidence with LIFEPAC's electives. Choose from Accounting, American Literature, Art, British
-                  Literature, Civics, Consumer Math, Family & Consumer Science, Foundations for Living: Studies in the
-                  Christian Worldview, Health Quest, High School Health, Spanish I and II, and Speech: Essentials of
-                  Communication, as well as LIFEPAC Select&nbsp;courses.</div>
+                <div class="eyebrow text-gray">Electives</div>
+                <div class="title-md">Broaden your child's knowledge-base.</div>
+                <div class="text-normal text-darkgray mb-md">LIFEPAC electives offer a balanced homeschool education
+                  with 13 mastery-based courses that promote critical thinking skills in independent learners.
+                  Structured lessons are available in subjects ranging from math, art, and world languages to
+                  literature, business, and home&nbsp;living.</div>
                 <div class="buttonset-container">
                   <div class="button-container"><a href="#" target=""
                       class="button button-lg button-text text-white border-primary primary-bkg">Buy Now
